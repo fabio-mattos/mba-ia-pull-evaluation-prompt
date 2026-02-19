@@ -1,12 +1,10 @@
-# Ingestão e Busca Semântica com LangChain e Postgres
+# Pull, Otimização e Avaliação de Prompts com LangChain e LangSmith
 
-### Desafio Tecnico - MBA IA Engenharia de Software - FullCycle
+# Segundo Desafio Tecnico - MBA IA Engenharia de Software - FullCycle
 
 ### Aluno: Fábio Celso de Mattos
 
 ### Turma: Setembro 2025
-
-# Pull, Otimização e Avaliação de Prompts com LangChain e LangSmith
 
 ## Objetivo
 
