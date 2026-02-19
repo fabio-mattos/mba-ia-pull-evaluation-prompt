@@ -55,8 +55,28 @@ def push_prompt_to_langsmith(prompt_name: str, prompt_data: dict) -> bool:
         
         prompt_template = ChatPromptTemplate.from_messages(messages)
         
-        # Fazer push para o Hub
-        hub.push(prompt_name, prompt_template)
+        # Extrair metadados
+        description = prompt_data.get("description", "Prompt otimizado para Bug to User Story")
+        tags = prompt_data.get("techniques_applied", [])
+        
+        # Garantir que tags sejam uma lista de strings
+        if isinstance(tags, str):
+            tags = [tags]
+        
+        # Adicionar tags extras se necessário
+        if "bug-to-user-story" not in tags:
+            tags.append("bug-to-user-story")
+            
+        print(f"   - Descrição: {description[:50]}...")
+        print(f"   - Tags: {tags}")
+        
+        # Fazer push para o Hub com metadados
+        hub.push(
+            prompt_name, 
+            prompt_template, 
+            new_repo_description=description,
+            new_repo_labels=tags
+        )
         
         print(f"✅ Prompt enviado com sucesso!")
         print(f"   - Nome: {prompt_name}")
