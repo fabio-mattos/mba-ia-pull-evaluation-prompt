@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# pytest
+.pytest_cache/
+.coverage
+
+# Logs
+*.log
+
+# Project specific
+screenshots/
+results/
+.claude/
+
+# Prompt iterations (keep only v1 and v2)
+prompts/bug_to_user_story_v[3-9].yml
+prompts/bug_to_user_story_v[0-9][0-9].yml
